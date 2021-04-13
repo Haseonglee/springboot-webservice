@@ -1,4 +1,4 @@
-package com.seong.springboot.web;
+package com.seong.springboot.web.dto;
 
 import com.seong.springboot.web.dto.HelloResponseDto;
 import org.springframework.web.bind.annotation.GetMapping;
