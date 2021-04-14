@@ -1,0 +1,6 @@
+com/seong/springboot/domain/posts/Posts.java
+ com.seong.springboot.domain.posts.Posts
+com/seong/springboot/domain/posts/PostsRepository.java
+ com.seong.springboot.domain.posts.PostsRepository
+com/seong/springboot/Application.java
+ com.seong.springboot.Application
