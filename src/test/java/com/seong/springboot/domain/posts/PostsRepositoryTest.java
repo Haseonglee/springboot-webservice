@@ -1,7 +1,5 @@
-package com.seong.springboot.web.domain.posts;
+package com.seong.springboot.domain.posts;
 
-import com.seong.springboot.domain.posts.Posts;
-import com.seong.springboot.domain.posts.PostsRepository;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;

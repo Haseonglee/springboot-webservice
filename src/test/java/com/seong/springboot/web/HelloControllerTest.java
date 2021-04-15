@@ -1,6 +1,5 @@
 package com.seong.springboot.web;
 
-import com.seong.springboot.web.dto.HelloController;
 import org.hamcrest.Matchers;
 import org.junit.Test;
 import org.junit.runner.RunWith;
