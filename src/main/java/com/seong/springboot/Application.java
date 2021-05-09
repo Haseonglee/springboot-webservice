@@ -12,4 +12,4 @@ public class Application {
     }
 }
 
-//application.properties에는 공백,주석 등을 사용할 수없음.
+
