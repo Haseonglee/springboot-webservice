@@ -8,17 +8,17 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@Getter
+@Getter //클래스 내의 모든 필드의 getter 메소드를 자동생성
 @NoArgsConstructor
-@Entity
+@Entity //테이블과 링크될 클래스임을 나타낸다.
 
-public class Posts extends BaseTimeEntity {
+public class Posts extends BaseTimeEntity {  //Posts 클래스가 BaseTimeEntity를 상속받도록 변경
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id //해당 테이블의 pk필드를 나타낸다.
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //pk의 생성규칙을 나타낸다.
     private Long id;
 
-    @Column(length = 500, nullable = false)
+    @Column(length = 500, nullable = false) //테이블의 칼럼을 나타냄
     private String title;
 
     @Column(columnDefinition = "TEXT", nullable = false)
@@ -26,7 +26,7 @@ public class Posts extends BaseTimeEntity {
 
     private String author;
 
-    @Builder
+    @Builder //해당 클래스의 빌드 패턴 클래스를 생성
     public Posts(String title, String content, String author) {
         this.title = title;
         this.content = content;

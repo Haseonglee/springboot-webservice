@@ -13,13 +13,13 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest //별다른 설정 없이 @SpringBootTest를 사용할 경우, H2 데이터베이스를 자동으로 실행해줌.
 public class PostsRepositoryTest {
 
     @Autowired
     PostsRepository postsRepository;
 
-    @After
+    @After //junit에서 단위 테스트가 끝날때마다 수행되는 메소드 지정
     public void cleanup() {
         postsRepository.deleteAll();
     }
@@ -30,14 +30,14 @@ public class PostsRepositoryTest {
         String title = "테스트 게시글";
         String content = "테스트 본문";
 
-        postsRepository.save(Posts.builder()
+        postsRepository.save(Posts.builder() //테이블 posts에 insert/update 쿼리를 실행, id값이 있다면 update,없다면 insert 실행
                 .title(title)
                 .content(content)
                 .author("jojoldu@gmail.com")
                 .build());
 
         //when
-        List<Posts> postsList = postsRepository.findAll();
+        List<Posts> postsList = postsRepository.findAll(); //테이블 posts에 있는 모든 데이터 조회
 
         //then
         Posts posts = postsList.get(0);

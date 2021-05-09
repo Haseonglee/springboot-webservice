@@ -11,3 +11,5 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 }
+
+//application.properties에는 공백,주석 등을 사용할 수없음.
