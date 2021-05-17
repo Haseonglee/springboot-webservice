@@ -44,5 +44,7 @@ dependencies {
     implementation('org.springframework.boot:spring-boot-starter-security')
     testImplementation('org.springframework.security:spring-security-test')
     compile('org.springframework.boot:spring-boot-starter-security')
+    //implementation 'org.springframework.boot:spring-boot-starter-security' //방금 추가
+    //implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'//방금 추가
     testCompile('org.springframework.security:spring-security-test')
 }
