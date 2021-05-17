@@ -39,7 +39,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @MockBean(JpaMetamodelMappingContext.class)
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT )
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class PostsApiControllerTest {
 
     @LocalServerPort
@@ -68,6 +68,7 @@ public class PostsApiControllerTest {
     public void tearDown() throws Exception {
         postsRepository.deleteAll();
     }
+
     @Test
     @WithMockUser(roles = "USER")
     public void Posts_등록된다() throws Exception {
@@ -121,7 +122,6 @@ public class PostsApiControllerTest {
                 .contentType(MediaType.APPLICATION_JSON_UTF8)
                 .content(new ObjectMapper().writeValueAsString(requestDto)))
                 .andExpect(status().isOk());
-
         //then
         List<Posts> all = postsRepository.findAll();
         assertThat(all.get(0).getTitle()).isEqualTo(expectedTitle);
